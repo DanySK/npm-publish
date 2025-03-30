@@ -1,3 +1,23 @@
+## [4.0.0](https://github.com/DanySK/npm-publish/compare/3.5.0...4.0.0) (2025-03-30)
+
+### ⚠ BREAKING CHANGES
+
+* migrate this fork to my build infrastructure
+
+### Bug Fixes
+
+* **docs:** version path ([0fd498f](https://github.com/DanySK/npm-publish/commit/0fd498f4e7f0435d4bbdf0f557c85662e7990095))
+
+### Build and continuous integration
+
+* configure wei/pull ([ac44121](https://github.com/DanySK/npm-publish/commit/ac44121d082c0280b3b7bf0b9c9e2e4343b75324))
+* migrate this fork to my build infrastructure ([8f65210](https://github.com/DanySK/npm-publish/commit/8f652107ec30d06148805e732463647aba2a97f3))
+* **renovate:** set includeForks ([7178f1c](https://github.com/DanySK/npm-publish/commit/7178f1c15f76a36ab4f0c174f63bf39b78b25161))
+
+### General maintenance
+
+* **gh:** Migrate set-output ([ba62ef1](https://github.com/DanySK/npm-publish/commit/ba62ef1c3887d10b9f2d9b74a5bebb9b876b66ca))
+
 # Changelog
 
 All notable changes to this project will be documented in this file.
