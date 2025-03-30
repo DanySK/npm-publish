@@ -1,0 +1,82 @@
+name: CI/CD Process
+on:
+  workflow_call:
+  workflow_dispatch:
+
+jobs:
+  build:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ windows-2022, macos-14, ubuntu-24.04 ]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - name: Checkout
+        uses: DanySK/action-checkout@0.2.22
+      - uses: DanySK/build-check-deploy-gradle-action@3.7.14
+        with:
+          # Dry-deployment
+          check-command: ./gradlew build --parallel
+          deploy-command: >-
+            ./gradlew
+            uploadAllToMavenCentralNexus
+            close
+            dropStagingRepositoryOnMavenCentral
+            --parallel
+          should-run-codecov: ${{ runner.os == 'Linux' }}
+          codecov-token: ${{ secrets.CODECOV_TOKEN }}
+          should-deploy: >-
+            ${{
+              runner.os == 'Linux'
+              && github.event_name != 'pull_request'
+            }}
+          maven-central-username: ${{ secrets.MAVEN_CENTRAL_USERNAME }}
+          maven-central-password: ${{ secrets.MAVEN_CENTRAL_PASSWORD }}
+          signing-key: ${{ secrets.SIGNING_KEY }}
+          signing-password: ${{ secrets.SIGNING_PASSWORD }}
+  release:
+    permissions:
+      contents: write
+      packages: write
+    needs:
+      - build
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4.2.2
+        with:
+          token: ${{ secrets.DEPLOYMENT_TOKEN }}
+      - name: Install Node
+        uses: actions/setup-node@v4.3.0
+        with:
+          node-version-file: package.json
+      - uses: DanySK/build-check-deploy-gradle-action@3.7.14
+        with:
+          retries-on-failure: '1'
+          build-command: true
+          check-command: true
+          deploy-command: |
+            npm install
+            npx semantic-release
+          should-run-codecov: false
+          should-deploy: true
+          github-token: ${{ github.token }}
+          gradle-publish-secret: ${{ secrets.GRADLE_PUBLISH_SECRET }}
+          gradle-publish-key: ${{ secrets.GRADLE_PUBLISH_KEY }}
+          maven-central-username: ${{ secrets.MAVEN_CENTRAL_USERNAME }}
+          maven-central-password: ${{ secrets.MAVEN_CENTRAL_PASSWORD }}
+          signing-key: ${{ secrets.SIGNING_KEY }}
+          signing-password: ${{ secrets.SIGNING_PASSWORD }}
+  success:
+    runs-on: ubuntu-24.04
+    needs:
+      - release
+      - build
+    if: >-
+      always() && (
+        contains(join(needs.*.result, ','), 'failure')
+        || !contains(join(needs.*.result, ','), 'cancelled')
+      )
+    steps:
+      - name: Verify that there were no failures
+        run: ${{ !contains(join(needs.*.result, ','), 'failure') }}

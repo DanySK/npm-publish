@@ -1,9 +1,0 @@
-{
-  "compilerOptions": {
-    "module": "NodeNext",
-    "moduleResolution": "NodeNext",
-    "rootDir": "src",
-    "outDir": "build",
-    "skipLibCheck": true,
-  }
-}

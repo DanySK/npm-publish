@@ -1,1 +1,0 @@
-Just some static file for the package

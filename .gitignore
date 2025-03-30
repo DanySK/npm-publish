@@ -1,13 +1,3 @@
 .gradle/
-.kotlin/
-.theia/
-.yarn/
-.yarnrc
-build
-.idea/
-local.properties
-apiDiff.api
-public/
-node_modules
-*.log
-lint.xml
+build/
+node_modules/
