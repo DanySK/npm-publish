@@ -1,3 +1,20 @@
+## [4.0.1](https://github.com/DanySK/npm-publish/compare/4.0.0...4.0.1) (2025-03-30)
+
+### Bug Fixes
+
+* [#117](https://github.com/DanySK/npm-publish/issues/117) Make task actions non-private ([c59189b](https://github.com/DanySK/npm-publish/commit/c59189b4b4a720452aedd0113a0d25e88af4edb8))
+* Gradle task dependency graph workaround ([d1e6652](https://github.com/DanySK/npm-publish/commit/d1e665235d7a4190c32361d482e21303ac05768d))
+* make the when expression complete ([c4c646d](https://github.com/DanySK/npm-publish/commit/c4c646d8c9e35b3b7f07e7ae94867ce7b9d09bd1))
+* **plugin:** [#181](https://github.com/DanySK/npm-publish/issues/181) Properly execute npm scripts ([7996f62](https://github.com/DanySK/npm-publish/commit/7996f62bd26acd3ee148860185bb22a7af9896df))
+* **plugin:** Down 11 ([d108bdb](https://github.com/DanySK/npm-publish/commit/d108bdb105b9c5cad6cd90d0305b85ff1ddc8972)), closes [#183](https://github.com/DanySK/npm-publish/issues/183) [#184](https://github.com/DanySK/npm-publish/issues/184)
+* Set python env ([5e67c02](https://github.com/DanySK/npm-publish/commit/5e67c02a780828ebfc635084edd42383a95f36d8))
+
+### General maintenance
+
+* Add missing changes ([0fce268](https://github.com/DanySK/npm-publish/commit/0fce268704b3b5cd1bda512a861ac924cf68cab3))
+* **gh:** Update actions versions ([757ca2c](https://github.com/DanySK/npm-publish/commit/757ca2c4699ed7d77f4b9cb31a2adeeb55b43a6c))
+* merge ([76438dc](https://github.com/DanySK/npm-publish/commit/76438dc8dae9d15ddf7c84cee968f2fbeb3997b1))
+
 ## [4.0.0](https://github.com/DanySK/npm-publish/compare/3.5.0...4.0.0) (2025-03-30)
 
 ### ⚠ BREAKING CHANGES
