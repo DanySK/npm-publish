@@ -12,6 +12,7 @@ import org.gradle.api.Project
 import org.gradle.api.artifacts.Configuration
 import org.gradle.api.provider.Provider
 import org.gradle.api.tasks.Copy
+import org.jetbrains.kotlin.gradle.ExperimentalWasmDsl
 import org.jetbrains.kotlin.gradle.plugin.mpp.KotlinJsCompilation
 import org.jetbrains.kotlin.gradle.targets.js.dsl.KotlinJsBinaryMode
 import org.jetbrains.kotlin.gradle.targets.js.dsl.KotlinJsTargetDsl
@@ -19,6 +20,7 @@ import org.jetbrains.kotlin.gradle.targets.js.ir.Executable
 import org.jetbrains.kotlin.gradle.targets.js.ir.JsIrBinary
 import org.jetbrains.kotlin.gradle.targets.js.ir.KotlinJsIrTarget
 import org.jetbrains.kotlin.gradle.targets.js.ir.Library
+import org.jetbrains.kotlin.gradle.targets.js.ir.LibraryWasm
 import org.jetbrains.kotlin.gradle.targets.js.npm.NpmDependency.Scope.*
 import org.jetbrains.kotlin.gradle.targets.js.npm.PublicPackageJsonTask
 import org.jetbrains.kotlin.gradle.targets.js.npm.npmProject
@@ -27,6 +29,7 @@ import org.jetbrains.kotlin.gradle.utils.named
 import java.io.File
 import org.jetbrains.kotlin.gradle.targets.js.npm.NpmDependency as KJsNpmDependency
 
+@OptIn(ExperimentalWasmDsl::class)
 @Suppress("LongMethod")
 internal fun Project.configure(target: KotlinJsTargetDsl): Unit = with(PluginLogger.wrap(logger)) {
   if (target !is KotlinJsIrTarget) {
@@ -35,7 +38,7 @@ internal fun Project.configure(target: KotlinJsTargetDsl): Unit = with(PluginLog
     extensions.getByType(NpmPublishExtension::class.java).packages.register(target.name) { pkg ->
       val binary = provider<JsIrBinary> {
         when (val it = target.binaries.find { it.mode == KotlinJsBinaryMode.PRODUCTION }) {
-          is Library -> it
+          is Library, is LibraryWasm -> it
           is Executable -> {
             warn {
               """
@@ -52,7 +55,6 @@ internal fun Project.configure(target: KotlinJsTargetDsl): Unit = with(PluginLog
           }
 
           null -> null
-          else -> error("Unrecognised Kotlin/JS binary type: ${it::class.java.name}")
         }
       }
       val compileKotlinTask = binary.flatMap<Kotlin2JsCompile>(JsIrBinary::linkTask)

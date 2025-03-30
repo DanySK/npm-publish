@@ -12,12 +12,67 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Verified Versions
 
 - Kotlin: 2.1.0
-- Gradle: 8.10
+- Gradle: 8.12
+- JDK: 11
+
+### Added
+
+### Changed
+
+### Removed
+
+---
+
+## [3.5.3]
+
+### Verified Versions
+
+- Kotlin: 2.1.0
+- Gradle: 8.12
+- JDK: 11
+
+### Added
+
+### Changed
+
+- Downgrade targetSdk to 11
+- Fix NpmPublishTask configuration task issue
+
+### Removed
+
+---
+
+## [3.5.2]
+
+### Verified Versions
+
+- Kotlin: 2.1.0
+- Gradle: 8.12
 - JDK: 21
 
 ### Added
 
 ### Changed
+
+- Fix #181 - npm commands are failing when node is not on PATH.
+
+### Removed
+
+---
+
+## [3.5.1]
+
+### Verified Versions
+
+- Kotlin: 2.1.0
+- Gradle: 8.12
+- JDK: 21
+
+### Added
+
+### Changed
+
+- #117 Make task actions non-private
 
 ### Removed
 
@@ -167,7 +222,7 @@ This is a maintenance release with a few minor bugfixes.
 ### Added
 
 - New `tag` option for `NpmPublishTask`
-- Integration with `com.netflix.nebula:nebula-node-plugin` to allow publishing without having NodeJS installed when
+- Integration with `com.github.node-gradle.node` to allow publishing without having NodeJS installed when
   kotlin plugin is not being used
 
 ### Changed
@@ -472,7 +527,13 @@ This is a maintenance release with a few minor bugfixes.
 
 ---
 
-[Unreleased]: https://github.com/mpetuska/npm-publish/compare/3.5.0...HEAD
+[Unreleased]: https://github.com/mpetuska/npm-publish/compare/3.5.3...HEAD
+
+[3.5.3]: https://github.com/mpetuska/npm-publish/compare/3.5.2...3.5.3
+
+[3.5.2]: https://github.com/mpetuska/npm-publish/compare/3.5.1...3.5.2
+
+[3.5.1]: https://github.com/mpetuska/npm-publish/compare/3.5.0...3.5.1
 
 [3.5.0]: https://github.com/mpetuska/npm-publish/compare/3.4.2...3.5.0
 

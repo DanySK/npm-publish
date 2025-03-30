@@ -1,8 +1,9 @@
 package dev.petuska.npm.publish
 
 import dev.petuska.npm.publish.config.configure
-import dev.petuska.npm.publish.config.configureNebulaNode
+import dev.petuska.npm.publish.config.configureNodeGradlePlugin
 import dev.petuska.npm.publish.extension.NpmPublishExtension
+import dev.petuska.npm.publish.task.NodeExecTask
 import dev.petuska.npm.publish.task.NpmAssembleTask
 import dev.petuska.npm.publish.task.NpmPackTask
 import dev.petuska.npm.publish.task.NpmPublishTask
@@ -25,7 +26,7 @@ public class NpmPublishPlugin : Plugin<Project> {
   override fun apply(project: Project): Unit = with(project) {
     val extension = extensions.create(NpmPublishExtension.NAME, NpmPublishExtension::class.java)
     configure(extension)
-    configureNebulaNode(extension)
+    configureNodeGradlePlugin(extension)
     pluginManager.withPlugin(KOTLIN_MPP_PLUGIN) {
       extensions.configure<KotlinMultiplatformExtension> {
         targets.filterIsInstance<KotlinJsTargetDsl>().forEach { configure(it) }
@@ -47,10 +48,17 @@ public class NpmPublishPlugin : Plugin<Project> {
 
     afterEvaluate {
       if (rootProject.tasks.names.contains("kotlinNodeJsSetup")) {
-        rootProject.tasks.named<NodeJsSetupTask>("kotlinNodeJsSetup").map(NodeJsSetupTask::destinationProvider)
+        rootProject.tasks.named<NodeJsSetupTask>("kotlinNodeJsSetup")
+          .map(NodeJsSetupTask::destinationProvider)
           .flatMap { it.asFile }
           .let(layout::dir)
           .let(extension.nodeHome::convention)
+        // Hack to work around all KGP kotlinNodeJsSetup tasks sharing the same output dir.
+        rootProject.allprojects { subProject ->
+          tasks.withType(NodeExecTask::class.java) {
+            it.mustRunAfter(subProject.tasks.withType(NodeJsSetupTask::class.java))
+          }
+        }
       }
       tasks.maybeCreate("assemble").apply {
         group = "build"

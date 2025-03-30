@@ -3,5 +3,5 @@
    "extends": [
       "github>DanySK/renovate-config:gradle-plugin"
    ],
-   "includeForks": true
+   "forkProcessing": "enabled"
 }
