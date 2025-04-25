@@ -1,3 +1,22 @@
+## [4.0.2](https://github.com/DanySK/npm-publish/compare/4.0.1...4.0.2) (2025-04-25)
+
+### Dependency updates
+
+* **core-deps:** update dependency gradle to v8.14 ([#14](https://github.com/DanySK/npm-publish/issues/14)) ([cf5aceb](https://github.com/DanySK/npm-publish/commit/cf5aceb7196181c589c9ff31b9db8a33962caff7))
+* **deps:** update node.js to 22.15 ([#13](https://github.com/DanySK/npm-publish/issues/13)) ([f1c36e1](https://github.com/DanySK/npm-publish/commit/f1c36e116b28ea15e7338557272ed74c24dbd670))
+* **deps:** update plugin com.gradle.develocity to v4 ([#6](https://github.com/DanySK/npm-publish/issues/6)) ([020ba46](https://github.com/DanySK/npm-publish/commit/020ba46764218ce82f63ac94a9e86871f89dfe91))
+* **deps:** update plugin gitsemver to v5 ([#10](https://github.com/DanySK/npm-publish/issues/10)) ([669003a](https://github.com/DanySK/npm-publish/commit/669003aed1237dfdd5b21dbb57dbcd5bec28b243))
+* **deps:** update plugin multijvmtesting to v3.4.0 ([#12](https://github.com/DanySK/npm-publish/issues/12)) ([c310fd7](https://github.com/DanySK/npm-publish/commit/c310fd790cc9399402b9415aab3554bf8ffbedd8))
+* **deps:** update plugin org.gradle.toolchains.foojay-resolver-convention to v0.10.0 ([#5](https://github.com/DanySK/npm-publish/issues/5)) ([7dbc007](https://github.com/DanySK/npm-publish/commit/7dbc007beac812a7addf840b38c981550ef49428))
+* **deps:** update plugin publishoncentral to v8.0.6 ([#3](https://github.com/DanySK/npm-publish/issues/3)) ([6e7d962](https://github.com/DanySK/npm-publish/commit/6e7d962f6968ff0533e9c7858982678a69259f0e))
+
+### Build and continuous integration
+
+* **deps:** update actions/setup-node action to v4.4.0 ([#9](https://github.com/DanySK/npm-publish/issues/9)) ([dec386c](https://github.com/DanySK/npm-publish/commit/dec386c5300b9d85f6a75330c935c711ba793955))
+* **deps:** update danysk/build-check-deploy-gradle-action action to v3.7.16 ([#4](https://github.com/DanySK/npm-publish/issues/4)) ([a0dde93](https://github.com/DanySK/npm-publish/commit/a0dde93de3200f0ebdf39e53fbd093c3eba10d7d))
+* **deps:** update danysk/build-check-deploy-gradle-action action to v3.7.17 ([#11](https://github.com/DanySK/npm-publish/issues/11)) ([1a09163](https://github.com/DanySK/npm-publish/commit/1a091635b0b5771f55a5ef65d154b2ff9250f737))
+* **deps:** update dependency windows github actions runner to v2025 ([#7](https://github.com/DanySK/npm-publish/issues/7)) ([f862b20](https://github.com/DanySK/npm-publish/commit/f862b205570542553218cabaf1ae07990e80cf08))
+
 ## [4.0.1](https://github.com/DanySK/npm-publish/compare/4.0.0...4.0.1) (2025-03-30)
 
 ### Bug Fixes
