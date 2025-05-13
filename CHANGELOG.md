@@ -1,3 +1,20 @@
+## [4.0.3](https://github.com/DanySK/npm-publish/compare/4.0.2...4.0.3) (2025-05-13)
+
+### Dependency updates
+
+* **core-deps:** update dependency org.jetbrains.kotlin:kotlin-gradle-plugin to v2.1.21 ([#24](https://github.com/DanySK/npm-publish/issues/24)) ([4f9f45c](https://github.com/DanySK/npm-publish/commit/4f9f45c552403fc831adda2499f41b2db568a734))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.126 ([#19](https://github.com/DanySK/npm-publish/issues/19)) ([7312ceb](https://github.com/DanySK/npm-publish/commit/7312cebdac2b7d2ab93fb3cdb26ab4bb22a62eef))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.127 ([#20](https://github.com/DanySK/npm-publish/issues/20)) ([59acabd](https://github.com/DanySK/npm-publish/commit/59acabd09a0c51555d73189649f2c9f91e09c80b))
+* **deps:** update plugin com.gradle.develocity to v4.0.1 ([#15](https://github.com/DanySK/npm-publish/issues/15)) ([d4e7567](https://github.com/DanySK/npm-publish/commit/d4e75670d6bece1d2d407f60513cfa4dba6a8f50))
+* **deps:** update plugin gitsemver to v5.1.2 ([#16](https://github.com/DanySK/npm-publish/issues/16)) ([1f341de](https://github.com/DanySK/npm-publish/commit/1f341def28ec722ae8eb7ff53454e9043689ecca))
+* **deps:** update plugin multijvmtesting to v3.4.1 ([#17](https://github.com/DanySK/npm-publish/issues/17)) ([50e983d](https://github.com/DanySK/npm-publish/commit/50e983dcf693545ec82cd127bcb733fbc720d136))
+* **deps:** update plugin org.danilopianini.gradle-pre-commit-git-hooks to v2.0.23 ([#18](https://github.com/DanySK/npm-publish/issues/18)) ([ba8c0c5](https://github.com/DanySK/npm-publish/commit/ba8c0c51d1cea5aa6ca55453b5812f623aa31289))
+* **deps:** update plugin publishoncentral to v8.0.7 ([#21](https://github.com/DanySK/npm-publish/issues/21)) ([964969b](https://github.com/DanySK/npm-publish/commit/964969bc6e48a133724f287bc43bd748b616be19))
+
+### Build and continuous integration
+
+* **deps:** update danysk/build-check-deploy-gradle-action action to v3.7.18 ([#22](https://github.com/DanySK/npm-publish/issues/22)) ([0151628](https://github.com/DanySK/npm-publish/commit/015162838625bb21d2a41ab4f9bd3e67bbe90ca0))
+
 ## [4.0.2](https://github.com/DanySK/npm-publish/compare/4.0.1...4.0.2) (2025-04-25)
 
 ### Dependency updates
