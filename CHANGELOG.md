@@ -1,3 +1,19 @@
+## [4.0.4](https://github.com/DanySK/npm-publish/compare/4.0.3...4.0.4) (2025-05-22)
+
+### Dependency updates
+
+* **core-deps:** update dependency gradle to v8.14.1 ([#32](https://github.com/DanySK/npm-publish/issues/32)) ([ac78763](https://github.com/DanySK/npm-publish/commit/ac7876398233b509735ceb7b541be89f7df72731))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.128 ([#28](https://github.com/DanySK/npm-publish/issues/28)) ([1d1e215](https://github.com/DanySK/npm-publish/commit/1d1e21530038e55a916f224f2aa5aeb59788b606))
+* **deps:** update plugin gitsemver to v5.1.3 ([#25](https://github.com/DanySK/npm-publish/issues/25)) ([e525985](https://github.com/DanySK/npm-publish/commit/e525985c894d943e28e3508872354bf19d1d954e))
+* **deps:** update plugin multijvmtesting to v3.4.2 ([#26](https://github.com/DanySK/npm-publish/issues/26)) ([6fc4cc3](https://github.com/DanySK/npm-publish/commit/6fc4cc3a24da4a79da8ce46d285a16e8dfe94a44))
+* **deps:** update plugin org.danilopianini.gradle-pre-commit-git-hooks to v2.0.24 ([#27](https://github.com/DanySK/npm-publish/issues/27)) ([def2d6b](https://github.com/DanySK/npm-publish/commit/def2d6b5fa077b934b882323d070af48be8c3097))
+* **deps:** update plugin org.gradle.toolchains.foojay-resolver-convention to v1 ([#31](https://github.com/DanySK/npm-publish/issues/31)) ([e2228f1](https://github.com/DanySK/npm-publish/commit/e2228f1d359ea75643086573dc124ee585f16c79))
+
+### Build and continuous integration
+
+* **deps:** update danysk/build-check-deploy-gradle-action action to v3.7.19 ([#29](https://github.com/DanySK/npm-publish/issues/29)) ([3915b03](https://github.com/DanySK/npm-publish/commit/3915b03a4196d77dcda5a8d4726e84258682bf76))
+* **deps:** update danysk/build-check-deploy-gradle-action action to v3.7.20 ([#30](https://github.com/DanySK/npm-publish/issues/30)) ([4d3cc07](https://github.com/DanySK/npm-publish/commit/4d3cc0736a3a51194a6fb51ce5913e00beb8e5d4))
+
 ## [4.0.3](https://github.com/DanySK/npm-publish/compare/4.0.2...4.0.3) (2025-05-13)
 
 ### Dependency updates
