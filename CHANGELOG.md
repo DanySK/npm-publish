@@ -1,3 +1,18 @@
+## [4.0.5](https://github.com/DanySK/npm-publish/compare/4.0.4...4.0.5) (2025-06-06)
+
+### Dependency updates
+
+* **core-deps:** update dependency gradle to v8.14.2 ([46cf86f](https://github.com/DanySK/npm-publish/commit/46cf86f2d984f6be3677e875b6b6c682cbb62b66))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.129 ([#35](https://github.com/DanySK/npm-publish/issues/35)) ([54ccdf2](https://github.com/DanySK/npm-publish/commit/54ccdf2b08bf8f53a1d1dedd330db5c58fc7bb56))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.131 ([#37](https://github.com/DanySK/npm-publish/issues/37)) ([882ed5b](https://github.com/DanySK/npm-publish/commit/882ed5bfa474f39a0e43655ae1ff95c4fcf78d7c))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.132 ([8f59adc](https://github.com/DanySK/npm-publish/commit/8f59adc4ec3b06ad4ed2aea6b1a80621fe0166e1))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.133 ([b853f40](https://github.com/DanySK/npm-publish/commit/b853f40a58f9066b9ea52b0b220174ef1bcf1f57))
+* **deps:** update node.js to 22.16 ([#36](https://github.com/DanySK/npm-publish/issues/36)) ([ec50b3d](https://github.com/DanySK/npm-publish/commit/ec50b3da047bfa30d2985f0a9ce95f61c16eb09a))
+* **deps:** update plugin com.gradle.develocity to v4.0.2 ([1f8f51c](https://github.com/DanySK/npm-publish/commit/1f8f51c12056f7213d13bd81d0a64bfca3b82580))
+* **deps:** update plugin multijvmtesting to v3.4.3 ([#33](https://github.com/DanySK/npm-publish/issues/33)) ([ae3873b](https://github.com/DanySK/npm-publish/commit/ae3873be03709fa74b96a097568dfec477543182))
+* **deps:** update plugin multijvmtesting to v3.5.0 ([d1035e3](https://github.com/DanySK/npm-publish/commit/d1035e30493b6832fb381d2307e4ded28ac17825))
+* **deps:** update plugin org.danilopianini.gradle-pre-commit-git-hooks to v2.0.25 ([#34](https://github.com/DanySK/npm-publish/issues/34)) ([eb586e6](https://github.com/DanySK/npm-publish/commit/eb586e60545ff5f3189acc8f4c85a4e4f37901ab))
+
 ## [4.0.4](https://github.com/DanySK/npm-publish/compare/4.0.3...4.0.4) (2025-05-22)
 
 ### Dependency updates
