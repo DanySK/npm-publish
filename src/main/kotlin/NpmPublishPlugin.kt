@@ -41,8 +41,7 @@ public class NpmPublishPlugin : Plugin<Project> {
     pluginManager.withPlugin(KOTLIN_JS_PLUGIN) {
       logger.warn("Kotlin/JS plugin integration is deprecated. Please migrate to Kotlin/Multiplatform plugin")
       extensions.configure<KotlinJsProjectExtension> {
-        @Suppress("DEPRECATION")
-        configure(target)
+        configure(this.js())
       }
     }
 

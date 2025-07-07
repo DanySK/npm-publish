@@ -34,15 +34,13 @@ internal fun Project.configure(extension: NpmPublishExtension) {
   extension.npmIgnore.convention(
     sysProjectEnvPropertyConvention(
       "npmIgnore",
-      provider { layout.projectDirectory.file(".npmignore").asFile }
-        .map { (if (it.exists()) it.absolutePath else null) }
+      provider { layout.projectDirectory.file(".npmignore").asFile.takeIf { it.exists() }?.absolutePath }
     ).map(layout.projectDirectory::file)
   )
   extension.npmrc.convention(
     sysProjectEnvPropertyConvention(
       "npmrc",
-      provider { layout.projectDirectory.file(".npmrc").asFile }
-        .map { (if (it.exists()) it.absolutePath else null) }
+      provider { layout.projectDirectory.file(".npmrc").asFile.takeIf { it.exists() }?.absolutePath }
     ).map(layout.projectDirectory::file)
   )
   extension.organization.convention(
