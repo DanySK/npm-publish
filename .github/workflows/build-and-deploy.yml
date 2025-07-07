@@ -16,13 +16,12 @@ jobs:
       - uses: DanySK/build-check-deploy-gradle-action@4.0.1
         with:
           # Dry-deployment
-          check-command: ./gradlew build --parallel
           deploy-command: >-
             ./gradlew
-            uploadAllToMavenCentralNexus
-            close
-            dropStagingRepositoryOnMavenCentral
-            --parallel
+            publishAllPublicationsToProjectLocalRepository
+            zipMavenCentralPortalPublication 
+            releaseMavenCentralPortalPublication
+            --dry-run
           should-run-codecov: ${{ runner.os == 'Linux' }}
           codecov-token: ${{ secrets.CODECOV_TOKEN }}
           should-deploy: >-
