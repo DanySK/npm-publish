@@ -1,3 +1,26 @@
+## [4.0.6](https://github.com/DanySK/npm-publish/compare/4.0.5...4.0.6) (2025-07-07)
+
+### Dependency updates
+
+* **core-deps:** update dependency gradle to v8.14.3 ([e2ea4dc](https://github.com/DanySK/npm-publish/commit/e2ea4dc007cedcc701b5292b5994767bec85403a))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.134 ([677304d](https://github.com/DanySK/npm-publish/commit/677304d640b83bab056205b2b53b72f79a8a5dcc))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.136 ([#57](https://github.com/DanySK/npm-publish/issues/57)) ([461b4de](https://github.com/DanySK/npm-publish/commit/461b4de675f1b1be74595fbc95f393b77b9972af))
+* **deps:** update node.js to 22.17 ([3877af0](https://github.com/DanySK/npm-publish/commit/3877af0d72905562ece32b34e4284b3a403bf141))
+* **deps:** update plugin gitsemver to v5.1.4 ([696e863](https://github.com/DanySK/npm-publish/commit/696e86374536bb4fccf1891d73650447b67b7bc8))
+* **deps:** update plugin gitsemver to v5.1.5 ([0a806e0](https://github.com/DanySK/npm-publish/commit/0a806e026c64f6189c7e6f6386ef16723f908fde))
+* **deps:** update plugin multijvmtesting to v3.5.1 ([9f83e76](https://github.com/DanySK/npm-publish/commit/9f83e76da9d7482c85ae4f21a4a39cc2fa1e583f))
+* **deps:** update plugin org.danilopianini.gradle-pre-commit-git-hooks to v2.0.26 ([97f3192](https://github.com/DanySK/npm-publish/commit/97f319249d6131233157152bad80272ab596f28c))
+* **deps:** update plugin org.danilopianini.gradle-pre-commit-git-hooks to v2.0.27 ([0a0c0fe](https://github.com/DanySK/npm-publish/commit/0a0c0fed2f5137275a6a8b4ec0cc73dd0ef4021a))
+
+### Bug Fixes
+
+* **release:** migrate to Maven Central Portal ([942e1bc](https://github.com/DanySK/npm-publish/commit/942e1bc4fbc1e72e74c3885474043912985aab77))
+
+### Build and continuous integration
+
+* **deps:** update danysk/build-check-deploy-gradle-action action to v4 ([d9cc58b](https://github.com/DanySK/npm-publish/commit/d9cc58be38b58cf9cc07fdceef92901a5c10afae))
+* **deps:** update danysk/build-check-deploy-gradle-action action to v4.0.1 ([1a3db62](https://github.com/DanySK/npm-publish/commit/1a3db6279cdce928e305987d7615cbafb34f091c))
+
 ## [4.0.5](https://github.com/DanySK/npm-publish/compare/4.0.4...4.0.5) (2025-06-06)
 
 ### Dependency updates
