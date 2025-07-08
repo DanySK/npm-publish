@@ -1,3 +1,10 @@
+## [4.0.7](https://github.com/DanySK/npm-publish/compare/4.0.6...4.0.7) (2025-07-08)
+
+### Dependency updates
+
+* **core-deps:** update dependency org.jetbrains.kotlin:kotlin-gradle-plugin to v2.2.0 ([#49](https://github.com/DanySK/npm-publish/issues/49)) ([1b0896e](https://github.com/DanySK/npm-publish/commit/1b0896e92b2e99815e88eb60333c84eb3816b85b))
+* **deps:** update plugin multijvmtesting to v3.5.4 ([d220414](https://github.com/DanySK/npm-publish/commit/d22041497fc7662f1ea371d7cf78a40f8b279315))
+
 ## [4.0.6](https://github.com/DanySK/npm-publish/compare/4.0.5...4.0.6) (2025-07-07)
 
 ### Dependency updates
