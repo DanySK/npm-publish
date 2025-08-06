@@ -4,6 +4,7 @@ import org.gradle.api.Action
 import org.gradle.api.plugins.ExtensionContainer
 import org.gradle.api.provider.Property
 import org.gradle.api.provider.Provider
+import org.gradle.kotlin.dsl.configure
 import java.util.*
 
 internal fun String?.notFalse() = !(
@@ -37,7 +38,3 @@ internal fun <T : Any, P : Provider<T>> P.configure(config: Action<T>): Provider
 
 @Suppress("UNCHECKED_CAST")
 internal fun <T> Any?.unsafeCast(): T = this as T
-
-internal inline fun <reified T> ExtensionContainer.configure(crossinline action: T.() -> Unit) {
-  configure(T::class.java) { it.apply(action) }
-}

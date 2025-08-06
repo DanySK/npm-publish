@@ -1,6 +1,7 @@
 @file:Suppress("UnstableApiUsage")
 
 import org.apache.tools.ant.taskdefs.condition.Os
+import org.gradle.api.tasks.testing.logging.TestLogEvent
 
 @Suppress("DSL_SCOPE_VIOLATION")
 plugins {
@@ -21,7 +22,7 @@ plugins {
 group = "org.danilopianini"
 description = "NPM package publishing to NPM repositories"
 
-inner class ProjectInfo {
+class ProjectInfo {
     val longName = "Template for Gradle Plugins"
     val website = "https://github.com/DanySK/npm-publish"
     val vcsUrl = "$website.git"
@@ -41,6 +42,7 @@ repositories {
 }
 
 multiJvm {
+    jvmVersionForCompilation = 17
     maximumSupportedJvmVersion.set(latestJavaSupportedByGradle)
 }
 
@@ -51,7 +53,9 @@ dependencies {
     implementation(libs.plugin.kotlin)
     implementation(libs.plugin.node.gradle)
     testImplementation(gradleTestKit())
-    testImplementation(libs.bundles.kotlin.testing)
+    testImplementation(platform(libs.junit.bom))
+    testImplementation(libs.bundles.test.implementation)
+    testRuntimeOnly(libs.bundles.test.runtime)
 }
 
 kotlin {
@@ -79,10 +83,7 @@ tasks.withType<Test>().configureEach {
         showStandardStreams = true
         showCauses = true
         showStackTraces = true
-        events(
-            *org.gradle.api.tasks.testing.logging.TestLogEvent
-                .values(),
-        )
+        events(*TestLogEvent.entries.toTypedArray())
         exceptionFormat = org.gradle.api.tasks.testing.logging.TestExceptionFormat.FULL
     }
 }
