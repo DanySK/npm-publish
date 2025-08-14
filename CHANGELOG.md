@@ -1,3 +1,11 @@
+## [4.1.1](https://github.com/DanySK/npm-publish/compare/4.1.0...4.1.1) (2025-08-14)
+
+### Dependency updates
+
+* **core-deps:** update dependency org.jetbrains.kotlin:kotlin-gradle-plugin to v2.2.10 ([#81](https://github.com/DanySK/npm-publish/issues/81)) ([40f9276](https://github.com/DanySK/npm-publish/commit/40f9276d1418edf13125b09b354a89bab81256cd))
+* **deps:** update plugin multijvmtesting to v4.0.3 ([#84](https://github.com/DanySK/npm-publish/issues/84)) ([f2faf95](https://github.com/DanySK/npm-publish/commit/f2faf9524fd7c777f2b8d62fea7d135baf27f814))
+* **deps:** update plugin org.danilopianini.gradle-pre-commit-git-hooks to v2.0.29 ([#83](https://github.com/DanySK/npm-publish/issues/83)) ([2005f6b](https://github.com/DanySK/npm-publish/commit/2005f6baba6c83c27c27ce2261839f8728b25e64))
+
 ## [4.1.0](https://github.com/DanySK/npm-publish/compare/4.0.8...4.1.0) (2025-08-14)
 
 ### Features
