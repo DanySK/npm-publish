@@ -12,6 +12,7 @@ import org.gradle.api.Project
 import org.gradle.api.artifacts.Configuration
 import org.gradle.api.provider.Provider
 import org.gradle.api.tasks.Copy
+import org.gradle.kotlin.dsl.withType
 import org.jetbrains.kotlin.gradle.ExperimentalWasmDsl
 import org.jetbrains.kotlin.gradle.plugin.mpp.KotlinJsCompilation
 import org.jetbrains.kotlin.gradle.targets.js.dsl.KotlinJsBinaryMode
@@ -58,9 +59,6 @@ internal fun Project.configure(target: KotlinJsTargetDsl): Unit = with(PluginLog
         }
       }
       val compileKotlinTask = binary.flatMap<Kotlin2JsCompile>(JsIrBinary::linkTask)
-      val publicPackageJsonTask = binary.flatMap {
-        tasks.named<PublicPackageJsonTask>(it.compilation.npmProject.publicPackageJsonTaskName)
-      }
       val mainCompilation = target.compilations.named("main")
       val processResourcesTask = mainCompilation.flatMap {
         tasks.named<Copy>(it.processResourcesTaskName)
@@ -71,11 +69,16 @@ internal fun Project.configure(target: KotlinJsTargetDsl): Unit = with(PluginLog
         it.asFile.parentFile.resolve("${it.asFile.nameWithoutExtension}.d.ts")
       }
 
-      tasks.named(assembleTaskName(pkg.name), NpmAssembleTask::class.java) {
-        it.dependsOn(compileKotlinTask, processResourcesTask, publicPackageJsonTask)
-        it.dependencySourcePackageJson.set(
-          publicPackageJsonTask.map(PublicPackageJsonTask::packageJsonFile).let(layout::file)
-        )
+      tasks.named<NpmAssembleTask>(assembleTaskName(pkg.name)).configure {
+        val publicPackageJsonTask = binary.map {
+          tasks.withType<PublicPackageJsonTask>().findByName(it.compilation.npmProject.publicPackageJsonTaskName)
+        }.orNull
+        if (publicPackageJsonTask != null) {
+          it.dependsOn(compileKotlinTask, processResourcesTask, publicPackageJsonTask)
+          it.dependencySourcePackageJson.set(
+            layout.file(provider { publicPackageJsonTask.packageJsonFile })
+          )
+        }
       }
 
       pkg.main.convention(
