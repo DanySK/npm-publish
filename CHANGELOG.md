@@ -1,3 +1,22 @@
+## [4.1.0](https://github.com/DanySK/npm-publish/compare/4.0.8...4.1.0) (2025-08-14)
+
+### Features
+
+* do not fail if wasmWasi is enabled (see https://youtrack.jetbrains.com/issue/KT-72858) ([#79](https://github.com/DanySK/npm-publish/issues/79)) ([876bd09](https://github.com/DanySK/npm-publish/commit/876bd09de3ef3032fabeba2ada6010a7c78dac57))
+
+### Dependency updates
+
+* **deps:** update plugin gitsemver to v6 ([1c6990f](https://github.com/DanySK/npm-publish/commit/1c6990f95753f7bc089de57cc5e0c282db04e515))
+* **deps:** update plugin multijvmtesting to v4 ([45da52d](https://github.com/DanySK/npm-publish/commit/45da52dd8c0c4ab4128b8269e3a60534356ef315))
+* **deps:** update plugin multijvmtesting to v4.0.2 ([#80](https://github.com/DanySK/npm-publish/issues/80)) ([4a129f9](https://github.com/DanySK/npm-publish/commit/4a129f9a16190c27739a3349dec0516120de4ae4))
+* **deps:** update plugin publishoncentral to v9.1.2 ([#78](https://github.com/DanySK/npm-publish/issues/78)) ([9dcfdbd](https://github.com/DanySK/npm-publish/commit/9dcfdbd0a5862b47dd999300b0bdae0955e67ac2))
+
+### Build and continuous integration
+
+* **deps:** update actions/checkout action to v4.3.0 ([d6dc505](https://github.com/DanySK/npm-publish/commit/d6dc5052a5d8dd7949deb536592b60eb2c0415d6))
+* **deps:** update actions/checkout action to v5 ([#75](https://github.com/DanySK/npm-publish/issues/75)) ([7e03637](https://github.com/DanySK/npm-publish/commit/7e03637dcb8f53348349febc01eb8012f9297ae5))
+* **deps:** update danysk/build-check-deploy-gradle-action action to v4.0.3 ([#70](https://github.com/DanySK/npm-publish/issues/70)) ([3d13718](https://github.com/DanySK/npm-publish/commit/3d137182c61def71fcb50074340dd6eb9695331f))
+
 ## [4.0.8](https://github.com/DanySK/npm-publish/compare/4.0.7...4.0.8) (2025-08-14)
 
 ### Dependency updates
