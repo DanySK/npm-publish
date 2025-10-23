@@ -1,3 +1,31 @@
+## [4.1.4](https://github.com/DanySK/npm-publish/compare/4.1.3...4.1.4) (2025-10-23)
+
+### Dependency updates
+
+* **core-deps:** update dependency org.jetbrains.kotlin.jvm to v2.2.21 ([#143](https://github.com/DanySK/npm-publish/issues/143)) ([5cc82e4](https://github.com/DanySK/npm-publish/commit/5cc82e40d6aee77def42aca97b6e02b1f3281cfe))
+* **deps:** update dependency org.junit:junit-bom to v5.14.0 ([#131](https://github.com/DanySK/npm-publish/issues/131)) ([dc8bca8](https://github.com/DanySK/npm-publish/commit/dc8bca890d772182c74c63a08dc32a6c7357348c))
+* **deps:** update dependency org.junit:junit-bom to v6 ([60e8f91](https://github.com/DanySK/npm-publish/commit/60e8f9179813e6cfa754bf1170cac5c0f30117a9))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.146 ([#127](https://github.com/DanySK/npm-publish/issues/127)) ([ca2fb0a](https://github.com/DanySK/npm-publish/commit/ca2fb0a72ae5e24b0403b0d00b31ea940a42c8e3))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.147 ([#130](https://github.com/DanySK/npm-publish/issues/130)) ([9ab4941](https://github.com/DanySK/npm-publish/commit/9ab4941ec947b46f9ddec9a73cbacd20ced9dd0f))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.148 ([#139](https://github.com/DanySK/npm-publish/issues/139)) ([3e26fda](https://github.com/DanySK/npm-publish/commit/3e26fda019da007bd12e0e80bbbfff3cbb4a185c))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.149 ([#140](https://github.com/DanySK/npm-publish/issues/140)) ([710a715](https://github.com/DanySK/npm-publish/commit/710a7151060fc95503115edf9c8783b1aa866a9e))
+* **deps:** update kotest to v6.0.4 ([#137](https://github.com/DanySK/npm-publish/issues/137)) ([fe4e0f1](https://github.com/DanySK/npm-publish/commit/fe4e0f10c543585c8e4d5ae8391345102110cc93))
+* **deps:** update node.js to 22.20 ([#128](https://github.com/DanySK/npm-publish/issues/128)) ([2c41943](https://github.com/DanySK/npm-publish/commit/2c419439a5a4912bfb59f48533bad7c2f7cf4aab))
+* **deps:** update node.js to 22.21 ([#141](https://github.com/DanySK/npm-publish/issues/141)) ([cfae32d](https://github.com/DanySK/npm-publish/commit/cfae32de9d64975ad8deb2b331e554f483aebad7))
+* **deps:** update plugin com.gradle.develocity to v4.2.1 ([#134](https://github.com/DanySK/npm-publish/issues/134)) ([11220da](https://github.com/DanySK/npm-publish/commit/11220dab1ca5de8e13b63b8b45beccb3733f22c9))
+* **deps:** update plugin com.gradle.develocity to v4.2.2 ([#135](https://github.com/DanySK/npm-publish/issues/135)) ([a2504f2](https://github.com/DanySK/npm-publish/commit/a2504f248f2def511af05f68e2da171df92705c1))
+* **deps:** update plugin multijvmtesting to v4.1.2 ([#123](https://github.com/DanySK/npm-publish/issues/123)) ([331bfc7](https://github.com/DanySK/npm-publish/commit/331bfc78f347344b0f1549631412ab248e62fb1e))
+* **deps:** update plugin multijvmtesting to v4.2.0 ([#124](https://github.com/DanySK/npm-publish/issues/124)) ([27e3f94](https://github.com/DanySK/npm-publish/commit/27e3f944dff79aa896553cb32ab697535250db8d))
+* **deps:** update plugin org.danilopianini.gradle-pre-commit-git-hooks to v2.1.2 ([#122](https://github.com/DanySK/npm-publish/issues/122)) ([149a0ad](https://github.com/DanySK/npm-publish/commit/149a0ad848f4e23589ab2acb0d1526b27cd067bf))
+
+### Build and continuous integration
+
+* **deps:** update actions/setup-node action to v6 ([#136](https://github.com/DanySK/npm-publish/issues/136)) ([e8c675f](https://github.com/DanySK/npm-publish/commit/e8c675f68fefe96af0fa296b6d9c15415e12c66f))
+* **deps:** update danysk/build-check-deploy-gradle-action action to v4.0.10 ([#133](https://github.com/DanySK/npm-publish/issues/133)) ([39cdc6e](https://github.com/DanySK/npm-publish/commit/39cdc6e1e27d55ee52c64b55953e286e6ce1d502))
+* **deps:** update danysk/build-check-deploy-gradle-action action to v4.0.8 ([#125](https://github.com/DanySK/npm-publish/issues/125)) ([ec51152](https://github.com/DanySK/npm-publish/commit/ec51152732f87b6e534bacadcc8fe9ac6494bd3d))
+* **deps:** update danysk/build-check-deploy-gradle-action action to v4.0.9 ([#129](https://github.com/DanySK/npm-publish/issues/129)) ([e7c4e25](https://github.com/DanySK/npm-publish/commit/e7c4e25f655571668d8919f0b1dcd42849b6ce6d))
+* **deps:** update dependency macos github actions runner to v15 ([#126](https://github.com/DanySK/npm-publish/issues/126)) ([46b5c2d](https://github.com/DanySK/npm-publish/commit/46b5c2da6d45217f74e4023a2009cef6deb9a458))
+
 ## [4.1.3](https://github.com/DanySK/npm-publish/compare/4.1.2...4.1.3) (2025-09-18)
 
 ### Dependency updates
