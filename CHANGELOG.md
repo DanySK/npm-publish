@@ -1,3 +1,19 @@
+## [4.1.5](https://github.com/DanySK/npm-publish/compare/4.1.4...4.1.5) (2025-10-29)
+
+### Dependency updates
+
+* **core-deps:** update gradle to v9.2.0 ([#155](https://github.com/DanySK/npm-publish/issues/155)) ([6f8f6dd](https://github.com/DanySK/npm-publish/commit/6f8f6ddf6af16ceafa424bd19847ccfec54e6654))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.150 ([#149](https://github.com/DanySK/npm-publish/issues/149)) ([319174b](https://github.com/DanySK/npm-publish/commit/319174bfe4a739b1765ddfea90a43087e39e84d7))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.151 ([#150](https://github.com/DanySK/npm-publish/issues/150)) ([bc46d69](https://github.com/DanySK/npm-publish/commit/bc46d69bcc69e58da2602e57491ff631710b834d))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.152 ([#151](https://github.com/DanySK/npm-publish/issues/151)) ([8c65ccc](https://github.com/DanySK/npm-publish/commit/8c65ccc60b6c6c19a1dbf2eee3a0136b7d515b6c))
+* **deps:** update plugin gitsemver to v7.0.5 ([#146](https://github.com/DanySK/npm-publish/issues/146)) ([959cfb2](https://github.com/DanySK/npm-publish/commit/959cfb242cbede5a054e37415ec35bf894495719))
+* **deps:** update plugin gitsemver to v7.0.6 ([#152](https://github.com/DanySK/npm-publish/issues/152)) ([ff5e874](https://github.com/DanySK/npm-publish/commit/ff5e874515664515dcfc9700e741e27f8122dd07))
+* **deps:** update plugin multijvmtesting to v4.3.0 ([#147](https://github.com/DanySK/npm-publish/issues/147)) ([2e4db17](https://github.com/DanySK/npm-publish/commit/2e4db17cca110ed96dd35f73c19a66aff046f292))
+* **deps:** update plugin multijvmtesting to v4.3.1 ([#148](https://github.com/DanySK/npm-publish/issues/148)) ([ad2bc6d](https://github.com/DanySK/npm-publish/commit/ad2bc6d8eee599b98c9156d0ce452204abee5324))
+* **deps:** update plugin multijvmtesting to v4.3.2 ([#153](https://github.com/DanySK/npm-publish/issues/153)) ([d3f2795](https://github.com/DanySK/npm-publish/commit/d3f27953eb5bda5bf3b845bfe9445a76e67d8583))
+* **deps:** update plugin org.danilopianini.gradle-pre-commit-git-hooks to v2.1.3 ([#145](https://github.com/DanySK/npm-publish/issues/145)) ([49d7af4](https://github.com/DanySK/npm-publish/commit/49d7af4bca1bb53ea40178d33faf7cd89d947a89))
+* **deps:** update plugin publishoncentral to v9.1.6 ([#144](https://github.com/DanySK/npm-publish/issues/144)) ([07be8cf](https://github.com/DanySK/npm-publish/commit/07be8cfbeca27f3e9358efd8392f90439b372f2b))
+
 ## [4.1.4](https://github.com/DanySK/npm-publish/compare/4.1.3...4.1.4) (2025-10-23)
 
 ### Dependency updates
