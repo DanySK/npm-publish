@@ -1,10 +1,7 @@
 **NOTE**: This is a fork of https://github.com/mpetuska/npm-publish.
-I'll try to keep it in sync, and patch here when needed.
+The original author can no longer maintain the project, and I adopted it.
 
 # NPM-PUBLISH GRADLE PLUGIN
-
-> [!IMPORTANT]  
-> Unfortunately I no longer have the capacity to maintain this plugin. If anyone out there is willing to take over the effort and for the repository, feel free to contact me to add references to your forks in this archived repository.
 
 Gradle plugin enabling NPM publishing (essentially `maven-publish` for NPM packages). Integrates seamlessly with
 Kotlin/JS/MPP plugin if applied, providing auto configurations.
