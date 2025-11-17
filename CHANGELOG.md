@@ -1,3 +1,10 @@
+## [4.1.7](https://github.com/DanySK/npm-publish/compare/4.1.6...4.1.7) (2025-11-17)
+
+### Documentation
+
+* revise maintenance note in README ([11a8988](https://github.com/DanySK/npm-publish/commit/11a89882f807eb064954f75e8c136739e9f75a23))
+* switch to Dokka v2 ([#168](https://github.com/DanySK/npm-publish/issues/168)) ([098a737](https://github.com/DanySK/npm-publish/commit/098a73753bf883c1ef3057d63aa4ac4859f0b7b5))
+
 ## [4.1.6](https://github.com/DanySK/npm-publish/compare/4.1.5...4.1.6) (2025-11-17)
 
 ### Dependency updates
