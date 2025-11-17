@@ -1,3 +1,9 @@
+## [4.1.8](https://github.com/DanySK/npm-publish/compare/4.1.7...4.1.8) (2025-11-17)
+
+### Documentation
+
+* **deps:** update dependency org.jetbrains.dokka to v2.1.0 ([#138](https://github.com/DanySK/npm-publish/issues/138)) ([8a10df1](https://github.com/DanySK/npm-publish/commit/8a10df14df0d033619c650f7380d849f18d6dd0d))
+
 ## [4.1.7](https://github.com/DanySK/npm-publish/compare/4.1.6...4.1.7) (2025-11-17)
 
 ### Documentation
