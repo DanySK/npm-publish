@@ -9,7 +9,7 @@ kotest-junit5-jvm = { module = "io.kotest:kotest-runner-junit5-jvm", version.ref
 kotest-assertions-core-jvm = { module = "io.kotest:kotest-assertions-core-jvm", version.ref = "kotest" }
 plugin-kotlin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
 plugin-node-gradle = "com.github.node-gradle:gradle-node-plugin:7.1.0"
-junit-bom = "org.junit:junit-bom:6.0.1"
+junit-bom = "org.junit:junit-bom:6.0.2"
 junit-jupiter-api = { module = "org.junit.jupiter:junit-jupiter-api"}
 junit-platform-launcher = { module = "org.junit.platform:junit-platform-launcher" }
 junit-jupiter-engine = { module = "org.junit.jupiter:junit-jupiter-engine" }
