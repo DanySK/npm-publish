@@ -18,6 +18,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 ### Changed
+- Licence changed to [Apache 2.0](https://www.apache.org/licenses/LICENSE-2.0)
 
 ### Removed
 

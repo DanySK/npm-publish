@@ -16,7 +16,7 @@ plugins {
 description =
   """
   A maven-publish alternative for NPM package publishing.
-  Integrates with kotlin JS/MPP plugins (if applied) to automatically
+  Integrates with kotlin JS/KMP plugins (if applied) to automatically
   setup publishing to NPM repositories for all JS targets.
   """
     .trimIndent()
@@ -39,10 +39,10 @@ dependencies {
 
 gradlePlugin {
   website = "https://npm-publish.petuska.dev"
-  vcsUrl = "https://github.com/mpetuska/npm-publish"
+  vcsUrl = "https://github.com/Kotlin/npm-publish"
   plugins {
     create(name) {
-      id = "dev.petuska.npm.publish"
+      id = "org.jetbrains.kotlin.npm-publish"
       implementationClass = "dev.petuska.npm.publish.NpmPublishPlugin"
       displayName = "NPM package publishing to NPM repositories"
       description = project.description
@@ -61,17 +61,23 @@ deployer {
       name = "Martynas Petuška"
       email = "martynas@petuska.dev"
     }
+    developer {
+      name = "JetBrains Team"
+      email = "kotlin.dev@jetbrains.com"
+      url.set("https://www.jetbrains.com")
+      organization.set("JetBrains")
+    }
     scm { fromGithub("Kotlin", rootProject.name.lowercase()) }
   }
   signing {
-    key = secret("SIGNING_PGP_KEY")
-    password = secret("SIGNING_PGP_PASSWORD")
+    key = secret("libs.sign.key.private")
+    password = secret("libs.sign.passphrase")
   }
   centralPortalSpec {
     allowMavenCentralSync = false
     auth {
-      user = secret("REPOSITORY_CENTRAL_USERNAME")
-      password = secret("REPOSITORY_CENTRAL_PASSWORD")
+      user = secret("libs.central.user")
+      password = secret("libs.central.password")
     }
   }
   githubSpec {
