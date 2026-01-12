@@ -56,10 +56,7 @@ deployer {
   projectInfo {
     url = "https://github.com/Kotlin/${rootProject.name.lowercase()}"
     description = provider { project.description }
-    license {
-      name = "Unlicense"
-      url = "https://unlicense.org"
-    }
+    license(apache2)
     developer {
       name = "Martynas Petuška"
       email = "martynas@petuska.dev"

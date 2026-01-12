@@ -5,16 +5,10 @@
 
 # NPM-PUBLISH GRADLE PLUGIN
 
-> [!IMPORTANT]  
-> Unfortunately I no longer have the capacity to maintain this plugin. If anyone out there is willing to take over the effort and for the repository, feel free to contact me to add references to your forks in this archived repository.
-> 
-> Currently known active forks:
-> - https://github.com/DanySK/npm-publish
-
 Gradle plugin enabling NPM publishing (essentially `maven-publish` for NPM packages). Integrates seamlessly with
-Kotlin/JS/MPP plugin if applied, providing auto configurations.
+Kotlin/JS/KMP plugin if applied, providing auto configurations.
 
-> Check the latest [release](https://github.com/mpetuska/npm-publish/releases/latest) for verified JVM, Kotlin and
+> Check the latest [release](https://github.com/Kotlin/npm-publish/releases/latest) for verified JVM, Kotlin and
 > Gradle tooling versions
 
 ## Setup
@@ -62,12 +56,28 @@ npmPublish {
 Full documentation can be found
 on [npm-publish.petuska.dev](https://npm-publish.petuska.dev/latest/user-guide/quick-start/)
 
+## Important note
+
+The project was developed by Martynas Petuška ([mpetuska](https://github.com/mpetuska)) for a long time, and after Martynas no longer had the capacity to maintain this plugin
+We ([JetBrains](https://github.com/JetBrains)), by mutual agreement with Martynas, took over the repository to further develop the plugin, 
+ensuring our awesome community would not be left without the essential feature of publishing KMP libraries to NPM.
+
+We would like to extend a huge thank-you to Martynas and all the contributors for developing such a great plugin!
+
+The plugin originally was under [Unlincense](https://unlicense.org/) license, but after the migration to [Kotlin org](https://github.com/Kotlin),
+there was a decision to migrate to the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0) license.
+
+The last version of code under [Unlincense](https://unlicense.org/) license is placed in this repo in the [licensed-with-unlicense](https://github.com/Kotlin/npm-publish/tree/licensed-with-unlicense) branch.
+The last version of the plugin published under [Unlincense](https://unlicense.org/) is [v3.5.3](https://github.com/Kotlin/npm-publish/releases/tag/3.5.3).
+
+All the versions after [v3.5.3](https://github.com/Kotlin/npm-publish/releases/tag/3.5.3) are under [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0).
+
 ## Contributing
 
 See [CONTRIBUTING](.github/CONTRIBUTING.md)
 
 Thanks to all the people who contributed to npm-publish!
 
-<a href="https://github.com/mpetuska/npm-publish/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=mpetuska/npm-publish" />
+<a href="https://github.com/Kotlin/npm-publish/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=Kotlin/npm-publish" />
 </a>
