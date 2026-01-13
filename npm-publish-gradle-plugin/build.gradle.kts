@@ -70,14 +70,14 @@ deployer {
     scm { fromGithub("Kotlin", rootProject.name.lowercase()) }
   }
   signing {
-    key = secret("libs.sign.key.private")
-    password = secret("libs.sign.passphrase")
+    key = secret("SIGNING_PGP_KEY")
+    password = secret("SIGNING_PGP_PASSWORD")
   }
   centralPortalSpec {
     allowMavenCentralSync = false
     auth {
-      user = secret("libs.central.user")
-      password = secret("libs.central.password")
+      user = secret("REPOSITORY_CENTRAL_USERNAME")
+      password = secret("REPOSITORY_CENTRAL_PASSWORD")
     }
   }
   githubSpec {
