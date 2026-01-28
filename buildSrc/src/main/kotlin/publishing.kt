@@ -7,10 +7,10 @@ import org.gradle.api.publish.maven.MavenPublication
 import org.gradle.kotlin.dsl.withType
 import org.gradle.plugins.signing.SigningExtension
 import java.net.URI
-import kotlin.text.get
 
 fun Project.secret(key: String): Provider<String> =
   providers.environmentVariable(key)
+    .orElse(providers.systemProperty(key))
     .orElse(providers.gradleProperty(key))
 
 fun PublishingExtension.projectInfo(configuration: MavenPom.() -> Unit) {

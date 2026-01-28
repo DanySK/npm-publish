@@ -11,7 +11,6 @@ plugins {
   alias(libs.plugins.signing)
   alias(libs.plugins.maven.publish)
   alias(libs.plugins.plugin.publish)
-  //  id("full-publishing")
 }
 
 description =
