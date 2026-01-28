@@ -54,15 +54,15 @@ gradlePlugin {
 signWith(
   keyId = secret("libs.sign.key.id"),
   signingKey = secret("libs.sign.key.private"),
-  signingPassphrase = secret("libs.sign.passphrase")
+  signingPassphrase = secret("libs.sign.passphrase"),
 )
 
 publishing {
   repositories {
     maven(
-      url = secret("libs.repo.url").map(::uri),
+      url = secret("libs.repo.url")?.let(::uri),
       username = secret("libs.repo.user"),
-      password = secret("libs.repo.password")
+      password = secret("libs.repo.password"),
     )
   }
 
@@ -91,9 +91,7 @@ publishing {
       }
     }
 
-    scm {
-      url = "https://github.com/Kotlin/${rootProject.name.lowercase()}"
-    }
+    scm { url = "https://github.com/Kotlin/${rootProject.name.lowercase()}" }
   }
 }
 

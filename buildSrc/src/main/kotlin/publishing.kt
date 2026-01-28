@@ -8,10 +8,8 @@ import org.gradle.kotlin.dsl.withType
 import org.gradle.plugins.signing.SigningExtension
 import java.net.URI
 
-fun Project.secret(key: String): Provider<String> =
-  providers.environmentVariable(key)
-    .orElse(providers.systemProperty(key))
-    .orElse(providers.gradleProperty(key))
+fun Project.secret(key: String): String? =
+  findProperty(key) as? String ?: System.getenv(key)
 
 fun PublishingExtension.projectInfo(configuration: MavenPom.() -> Unit) {
   publications.withType<MavenPublication>().configureEach {
@@ -20,15 +18,15 @@ fun PublishingExtension.projectInfo(configuration: MavenPom.() -> Unit) {
 }
 
 fun Project.signWith(
-  keyId: Provider<String>,
-  signingKey: Provider<String>,
-  signingPassphrase: Provider<String>,
+  keyId: String?,
+  signingKey: String?,
+  signingPassphrase: String?,
 ) {
   val signing = extensions.getByType(SigningExtension::class.java)
   signing.useInMemoryPgpKeys(
-    keyId.orNull,
-     signingKey.orNull,
-    signingPassphrase.orNull
+    keyId,
+     signingKey,
+    signingPassphrase
   )
 
   val publishing = extensions.getByType(PublishingExtension::class.java)
@@ -36,16 +34,16 @@ fun Project.signWith(
 }
 
 fun RepositoryHandler.maven(
-  url: Provider<URI>,
-  username: Provider<String>,
-  password: Provider<String>,
+  url: URI?,
+  username: String?,
+  password: String?
 ) {
-  val repositoryUrl = url.orNull ?: return
+  val repositoryUrl = url ?: return
   maven {
     this.url = repositoryUrl
     credentials {
-      this.username = username.orNull
-      this.password = password.orNull
+      this.username = username
+      this.password = password
     }
   }
 }
