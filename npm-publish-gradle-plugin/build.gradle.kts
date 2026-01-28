@@ -8,9 +8,10 @@ plugins {
   alias(libs.plugins.kotlin.plugin.serialization)
   alias(libs.plugins.ktfmt)
   alias(libs.plugins.dokkatoo)
-  alias(libs.plugins.deployer)
-  //  id("full-publishing")
+  alias(libs.plugins.signing)
+  alias(libs.plugins.maven.publish)
   alias(libs.plugins.plugin.publish)
+  //  id("full-publishing")
 }
 
 description =
@@ -51,41 +52,48 @@ gradlePlugin {
   }
 }
 
-deployer {
-  content { gradlePluginComponents() }
+signWith(
+  keyId = secret("libs.sign.key.id"),
+  signingKey = secret("libs.sign.key.private"),
+  signingPassphrase = secret("libs.sign.passphrase")
+)
+
+publishing {
+  repositories {
+    maven(
+      url = secret("libs.repo.url").map(::uri),
+      username = secret("libs.repo.user"),
+      password = secret("libs.repo.password")
+    )
+  }
+
   projectInfo {
     url = "https://github.com/Kotlin/${rootProject.name.lowercase()}"
     description = provider { project.description }
-    license(apache2)
-    developer {
-      name = "Martynas Petuška"
-      email = "martynas@petuska.dev"
+
+    licenses {
+      license {
+        name = "Apache-2.0"
+        url = "https://www.apache.org/licenses/LICENSE-2.0.txt"
+        distribution = "repo"
+      }
     }
-    developer {
-      name = "JetBrains Team"
-      email = "kotlin.dev@jetbrains.com"
-      url.set("https://www.jetbrains.com")
-      organization.set("JetBrains")
+
+    developers {
+      developer {
+        name = "Martynas Petuška"
+        email = "martynas@petuska.dev"
+      }
+      developer {
+        id = "JetBrains"
+        name = "JetBrains Team"
+        organization = "JetBrains"
+        organizationUrl = "https://www.jetbrains.com"
+      }
     }
-    scm { fromGithub("Kotlin", rootProject.name.lowercase()) }
-  }
-  signing {
-    key = secret("SIGNING_PGP_KEY")
-    password = secret("SIGNING_PGP_PASSWORD")
-  }
-  centralPortalSpec {
-    allowMavenCentralSync = false
-    auth {
-      user = secret("REPOSITORY_CENTRAL_USERNAME")
-      password = secret("REPOSITORY_CENTRAL_PASSWORD")
-    }
-  }
-  githubSpec {
-    owner = "Kotlin"
-    repository = rootProject.name.lowercase()
-    auth {
-      user = secret("REPOSITORY_GITHUB_USERNAME")
-      token = secret("REPOSITORY_GITHUB_PASSWORD")
+
+    scm {
+      url = "https://github.com/Kotlin/${rootProject.name.lowercase()}"
     }
   }
 }

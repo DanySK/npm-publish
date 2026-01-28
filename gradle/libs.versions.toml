@@ -15,8 +15,9 @@ kotest-assertions = [
 ]
 
 [plugins]
-deployer = "io.deepmedia.tools.deployer:0.18.0"
 dokkatoo = "dev.adamko.dokkatoo-html:2.4.0"
+signing = { id = "signing" }
+maven-publish = { id = "maven-publish" }
 kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
 kotlin-multiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
 kotlin-plugin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
