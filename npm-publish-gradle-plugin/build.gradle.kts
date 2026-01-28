@@ -67,6 +67,7 @@ publishing {
   }
 
   projectInfo {
+    name = "npm-publish"
     url = "https://github.com/Kotlin/${rootProject.name.lowercase()}"
     description = provider { project.description }
 
