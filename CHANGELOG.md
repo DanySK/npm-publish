@@ -1,3 +1,24 @@
+## [4.1.10](https://github.com/DanySK/npm-publish/compare/4.1.9...4.1.10) (2026-01-29)
+
+### Dependency updates
+
+* **core-deps:** update gradle to v9.3.1 ([#214](https://github.com/DanySK/npm-publish/issues/214)) ([f515bd4](https://github.com/DanySK/npm-publish/commit/f515bd4ddfde7de5e1127a02f307a2b76aa85d4a))
+* **deps:** update kotest to v6.1.0 ([#204](https://github.com/DanySK/npm-publish/issues/204)) ([b9d90f6](https://github.com/DanySK/npm-publish/commit/b9d90f6d560dfbfdf03996a4012fde88275b1097))
+* **deps:** update kotest to v6.1.1 ([#208](https://github.com/DanySK/npm-publish/issues/208)) ([aa91145](https://github.com/DanySK/npm-publish/commit/aa911453b7cb682b98f5b59ebe9c7ccd9ca685ed))
+* **deps:** update kotest to v6.1.2 ([#210](https://github.com/DanySK/npm-publish/issues/210)) ([ad192e4](https://github.com/DanySK/npm-publish/commit/ad192e4724a4df36d0a325cdf02977b6a4413ac4))
+* **deps:** update plugin com.gradle.develocity to v4.3.2 ([#211](https://github.com/DanySK/npm-publish/issues/211)) ([7af2da1](https://github.com/DanySK/npm-publish/commit/7af2da1b5736eb0c8b54b6595ea9f24e0b03457b))
+* **deps:** update plugin gitsemver to v7.0.10 ([#209](https://github.com/DanySK/npm-publish/issues/209)) ([f8496bb](https://github.com/DanySK/npm-publish/commit/f8496bb0a86e3141caef0e365eff861311d887b7))
+* **deps:** update plugin publishoncentral to v9.1.11 ([#203](https://github.com/DanySK/npm-publish/issues/203)) ([2eb2542](https://github.com/DanySK/npm-publish/commit/2eb254257bba03e0d8ad22e1aa1d9cc23f2555d1))
+
+### Build and continuous integration
+
+* **deps:** update actions/checkout action to v6.0.2 ([#206](https://github.com/DanySK/npm-publish/issues/206)) ([17f2b55](https://github.com/DanySK/npm-publish/commit/17f2b555367161a9364e59d34bf1d67d7f909fa5))
+* **deps:** update danysk/action-checkout action to v0.2.28 ([#207](https://github.com/DanySK/npm-publish/issues/207)) ([f5079b7](https://github.com/DanySK/npm-publish/commit/f5079b713931ce390159d11cc08426bbcf015a60))
+* **deps:** update danysk/build-check-deploy-gradle-action action to v4.0.19 ([#202](https://github.com/DanySK/npm-publish/issues/202)) ([d6b0d6e](https://github.com/DanySK/npm-publish/commit/d6b0d6ee3606690576542a19968433119a851376))
+* **deps:** update danysk/build-check-deploy-gradle-action action to v4.0.20 ([#205](https://github.com/DanySK/npm-publish/issues/205)) ([5d2b298](https://github.com/DanySK/npm-publish/commit/5d2b298f608ec9690b708148928e8c1565e3cbe5))
+* **deps:** update danysk/build-check-deploy-gradle-action action to v4.0.21 ([#212](https://github.com/DanySK/npm-publish/issues/212)) ([4ae3c0c](https://github.com/DanySK/npm-publish/commit/4ae3c0ce52576f8532e180f7ccd6d1c3c38143f8))
+* **deps:** update danysk/build-check-deploy-gradle-action action to v4.0.22 ([#213](https://github.com/DanySK/npm-publish/issues/213)) ([f7bb20d](https://github.com/DanySK/npm-publish/commit/f7bb20d48077f3d2ebfa0e2fcbb3e84f58a4c4a7))
+
 ## [4.1.9](https://github.com/DanySK/npm-publish/compare/4.1.8...4.1.9) (2026-01-17)
 
 ### Dependency updates
