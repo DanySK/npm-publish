@@ -22,7 +22,7 @@ tasks:
 
 ```kotlin title="build.gradle.kts"
 plugins {
-    id("dev.petuska.npm.publish") version "<VERSION>"
+    kotlin("npm-publish") version "<VERSION>"
     kotlin("multiplatform") version "<VERSION>>" // Optional, also supports "js"
 }
 
