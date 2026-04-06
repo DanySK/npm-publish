@@ -77,8 +77,8 @@ abstract class ITest {
         js(compiler) {
           browser()
           if (compiler == KotlinJsCompilerType.IR) binaries.library()
-          compilations.named("main") { it.dependencies { api(npm("axios", "*")) } }
         }
+        sourceSets { getByName("main").dependencies { api(npm("axios", "*")) } }
       }
     }
   }
@@ -94,8 +94,8 @@ abstract class ITest {
         js(targetName, compiler) {
           browser()
           if (compiler == KotlinJsCompilerType.IR) binaries.library()
-          compilations.named("main") { it.dependencies { api(npm("axios", "*")) } }
         }
+        sourceSets { jsMain.dependencies { api(npm("axios", "*")) } }
       }
     }
   }

@@ -1,12 +1,18 @@
 [versions]
-kotest = "6.0.7"
+kotest = "6.1.11"
 kotlin = "2.3.0"
+dokkatoo = "2.4.0"
+kfmt = "0.25.0"
+mkdocs = "4.0.1"
+plugin-publish = "2.0.0"
+versions = "1.0.1"
+node-plugin = "7.1.0"
 
 [libraries]
 kotest-assertions-core = { module = "io.kotest:kotest-assertions-core", version.ref = "kotest" }
 kotest-assertions-json = { module = "io.kotest:kotest-assertions-json", version.ref = "kotest" }
 plugin-kotlin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
-plugin-node-gradle = "com.github.node-gradle:gradle-node-plugin:7.1.0"
+plugin-node-gradle = { module = "com.github.node-gradle:gradle-node-plugin", version.ref = "node-plugin" }
 
 [bundles]
 kotest-assertions = [
@@ -15,13 +21,15 @@ kotest-assertions = [
 ]
 
 [plugins]
-dokkatoo = "dev.adamko.dokkatoo-html:2.4.0"
 signing = { id = "signing" }
 maven-publish = { id = "maven-publish" }
+
+ktfmt = { id = "com.ncorti.ktfmt.gradle", version.ref = "kfmt" }
+mkdocs = { id = "ru.vyarus.mkdocs", version.ref = "mkdocs" }
+plugin-publish = { id = "com.gradle.plugin-publish", version.ref = "plugin-publish" }
+versions = { id = "nl.littlerobots.version-catalog-update", version.ref = "versions" }
+
+dokkatoo = { id = "dev.adamko.dokkatoo-html", version.ref = "dokkatoo" }
 kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
 kotlin-multiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
 kotlin-plugin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
-ktfmt = "com.ncorti.ktfmt.gradle:0.25.0"
-mkdocs = "ru.vyarus.mkdocs:4.0.1"
-plugin-publish = "com.gradle.plugin-publish:2.0.0"
-versions = "nl.littlerobots.version-catalog-update:1.0.1"
