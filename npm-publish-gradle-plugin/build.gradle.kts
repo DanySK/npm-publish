@@ -1,5 +1,6 @@
 @file:Suppress("UnstableApiUsage")
 
+import org.gradle.plugin.compatibility.compatibility
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 import org.jetbrains.kotlin.gradle.tasks.KotlinJvmCompile
 
@@ -47,6 +48,12 @@ gradlePlugin {
       displayName = "NPM package publishing to NPM repositories"
       description = project.description
       tags = listOf("npm", "publishing", "kotlin", "node", "js")
+
+      compatibility {
+        features {
+          configurationCache = true
+        }
+      }
     }
   }
 }

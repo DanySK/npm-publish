@@ -4,7 +4,7 @@ kotlin = "2.3.0"
 dokkatoo = "2.4.0"
 kfmt = "0.25.0"
 mkdocs = "4.0.1"
-plugin-publish = "2.0.0"
+plugin-publish = "2.1.0"
 versions = "1.0.1"
 node-plugin = "7.1.0"
 
